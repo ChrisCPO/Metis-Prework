@@ -12,7 +12,7 @@ case action
     puts "=#{x + y}"
 
   when "s"
-    puts "+#{x - y}"
+    puts "=#{x - y}"
 
   when "m"
     puts "=#{x * y}"
