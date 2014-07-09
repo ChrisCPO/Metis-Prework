@@ -14,5 +14,7 @@ while checkyr < endyr + 1
     bleap= true
     puts checkyr
     checkyr += 1
+  else
+    checkyr += 1
   end
 end

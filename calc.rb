@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 puts "value 1"
 x = gets.chomp.to_i
 
