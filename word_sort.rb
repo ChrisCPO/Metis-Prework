@@ -1,12 +1,14 @@
-words=[]
+words= []
+type = true
 
-new = gets.chomp
-while new != ""
-  words.push(new)
+while type == true
+  print "type in a word and hit enter "
+  new = gets.chomp
 
-  if new ==nil
-    break
+  if new == ""
+  puts words.sort
+  break
+  else
+     words.push(new)
   end
 end
-
-puts words
