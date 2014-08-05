@@ -1,20 +1,22 @@
 puts "enter starting year, AD"
-startyr = gets.chomp
-startyr = startyr.to_i
+checkyr = gets.chomp
+checkyr = checkyr.to_i
 
 puts "enter ending year, AD"
 endyr = gets.chomp
 endyr = endyr.to_i
-
-bleap = false
-checkyr = startyr
-
+puts ""
+leapyrs = []
 while checkyr < endyr + 1
-  if checkyr%4 == 0
-    bleap= true
-    puts checkyr
-    checkyr += 1
-  else
-    checkyr += 1
+  if checkyr % 400 == 0
+    leapyrs.push checkyr
+  elsif checkyr % 100== 0
+  elsif checkyr % 4==0 
+    leapyrs.push checkyr
   end
+
+  checkyr= checkyr + 1
 end
+
+puts leapyrs
+puts  "there were #{leapyrs.length} leap years"
