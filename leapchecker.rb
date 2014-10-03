@@ -10,12 +10,12 @@ leapyrs = []
 while checkyr < endyr + 1
   if checkyr % 400 == 0
     leapyrs.push checkyr
-  elsif checkyr % 100== 0
-  elsif checkyr % 4==0 
+  elsif checkyr % 100 == 0
+  elsif checkyr % 4 == 0 
     leapyrs.push checkyr
   end
 
-  checkyr= checkyr + 1
+  checkyr = checkyr + 1
 end
 
 puts leapyrs
