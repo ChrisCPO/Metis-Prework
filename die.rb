@@ -1,25 +1,22 @@
 class Die
-
-  def initialize 
-
-     roll
+  attr_reader :result
+  def initialize(sides, num_to_roll)
+    @result = []
+    @sides = sides
+    @num_to_roll = num_to_roll
+    roll
   end
 
-  def roll 
-    @result = 1 + rand(6)
+  def roll
+    @num_to_roll.times do
+    @result << 1 + rand(@sides)
+    end
   end
 
   def result
     @result
   end
-  
-  def cheat(n)
-    if n >= 1 and n <= 7 
-      @result = n
-    else
-      puts "D6 buddy"
-    end
-  end
 end
 
- puts Die.new.result
+rolls = Die.new(20, 3)
+puts rolls.result
